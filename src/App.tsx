@@ -21,7 +21,7 @@ const App = () => (
         <ScrollProgress />
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Work />} />
             <Route path="/about" element={<About />} />

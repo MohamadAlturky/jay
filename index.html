@@ -12,6 +12,19 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Restore path encoded by 404.html redirect
+      (function () {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          var base = window.location.pathname;
+          window.history.replaceState(
+            null, null,
+            base + decodeURIComponent(p) + window.location.hash
+          );
+        }
+      })();
+    </script>
   </head>
 
   <body>
